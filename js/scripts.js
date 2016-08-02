@@ -120,6 +120,17 @@ $(document).ready(function(){
 	global.window.resize(onResize);
 	onResize();	
 	
+	$('.blog_list li').addClass('grid-item');
+	if($('.grid').length){
+    	$('.grid').masonry({
+		  // options
+		  itemSelector: '.grid-item',
+		  gutter: 5,
+		  percentPosition: true
+		});
+	};
+
+
 });
 
 function onResize(){
